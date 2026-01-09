@@ -40,7 +40,7 @@ export const FinalCta: React.FC = () => {
              <div className="w-full md:w-1/2 space-y-8">
                 <div>
                    <h3 className="text-2xl font-bold text-brand-text mb-2">本格よもぎ蒸し専門店 ミーシェ</h3>
-                   <p className="text-brand-textLight text-lg tracking-widest">MIECHE</p>
+                   <p className="text-brand-textLight text-lg tracking-widest">Meshie</p>
                 </div>
                 
                 <div className="space-y-4 text-lg">
