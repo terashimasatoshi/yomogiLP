@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>福井の本格よもぎ蒸し専門店 ミーシェ｜冷え・妊活・生理痛</title>
+    <meta name="description" content="福井市の本格よもぎ蒸し専門店ミーシェ。全7室完全個室。国産無農薬・伊吹山産よもぎ使用。冷え性、妊活、生理痛、更年期のお悩みに。初回¥3,900。" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Zen Maru Gothic"', 'sans-serif'],
+              serif: ['"Zen Maru Gothic"', 'sans-serif'], 
+            },
+            colors: {
+              brand: {
+                text: '#5C5046', // Warm Dark Brown
+                primary: '#E88D93', // Soft Pink
+                secondary: '#96C59E', // Sage Green
+                accent: '#D9737A', // Deep Pink
+                bg: '#FFFCFA', // Warm White
+                bgDark: '#F7F0EB', // Beige
+                highlight: '#FFF5F5', // Light Pink Bg
+              }
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Zen Maru Gothic', sans-serif;
+        background-color: #FFFCFA;
+        color: #5C5046;
+        overflow-x: hidden;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
