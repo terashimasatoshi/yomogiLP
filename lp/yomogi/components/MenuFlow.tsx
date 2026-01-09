@@ -38,7 +38,7 @@ export const MenuFlow: React.FC = () => {
                 初めての方へ
               </span>
               <h3 className="text-2xl md:text-4xl font-bold text-brand-text mb-4">
-                お悩み別・漢方よもぎ蒸し
+                お悩み別・薬草よもぎ蒸し
               </h3>
               <p className="text-brand-textLight text-lg mb-8">
                  カウンセリング + よもぎ蒸し(30分) + ハーブティー
@@ -70,7 +70,7 @@ export const MenuFlow: React.FC = () => {
              >
                 <div className="flex justify-between items-baseline mb-2">
                    <h4 className="text-xl font-bold text-brand-text">2回目以降</h4>
-                   <span className="text-2xl font-bold text-brand-primary">¥4,500</span>
+                   <span className="text-2xl font-bold text-brand-primary">¥3,850~</span>
                 </div>
                 <p className="text-sm text-brand-textLight">※次回予約でさらにお得に！</p>
              </motion.div>
