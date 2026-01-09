@@ -115,7 +115,7 @@ export const ProblemAffinity: React.FC = () => {
                 悩んでいました。
               </h2>
               <p className="text-lg text-brand-textLight leading-loose">
-                こんにちは、ミーシェ オーナーの森です。<br/>
+                こんにちは、ミーシェ オーナーの清水です。<br/>
                 私は20代の頃、ひどい冷え性でした。冬は布団に入っても足が冷たくて眠れない、生理の時は薬が手放せない…。そんな毎日でした。
               </p>
               <p className="text-lg text-brand-textLight leading-loose">
