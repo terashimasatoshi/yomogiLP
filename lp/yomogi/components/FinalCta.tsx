@@ -27,14 +27,15 @@ export const FinalCta: React.FC = () => {
             className="bg-brand-bgDark rounded-[3rem] p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-12 items-center"
           >
              <div className="w-full md:w-1/2 h-80 bg-gray-200 rounded-3xl overflow-hidden shadow-inner relative border-4 border-white">
-               {/* Map Placeholder */}
+               {/* Map */}
                <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.123!2d136.2!3d36.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDAwJzAwLjAiTiAxMzbCsDEyJzAwLjAiRQ!5e0!3m2!1sen!2sjp!4v1600000000000!5m2!1sen!2sjp" 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.0266656753242!2d136.23657359999999!3d36.092838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8bf6c74ecbc25%3A0xeb548f9f47249d70!2z5pys5qC844KI44KC44GO6JK444GX5bCC6ZaA5bqXIE1lc2hpZQ!5e0!3m2!1sja!2sjp!4v1767954951003!5m2!1sja!2sjp" 
                  width="100%" 
                  height="100%" 
                  style={{border:0}} 
                  allowFullScreen 
                  loading="lazy"
+                 referrerPolicy="no-referrer-when-downgrade"
                ></iframe>
              </div>
              
