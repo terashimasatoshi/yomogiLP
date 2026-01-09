@@ -41,7 +41,7 @@ export const FinalCta: React.FC = () => {
              <div className="w-full md:w-1/2 space-y-8">
                 <div>
                    <h3 className="text-2xl font-bold text-brand-text mb-2">本格よもぎ蒸し専門店 ミーシェ</h3>
-                   <p className="text-brand-textLight text-lg tracking-widest">MIECHE</p>
+                   <p className="text-brand-textLight text-lg tracking-widest">Meshie</p>
                 </div>
                 
                 <div className="space-y-4 text-lg">
@@ -57,8 +57,8 @@ export const FinalCta: React.FC = () => {
                    <div className="flex items-start gap-4">
                       <Clock className="text-brand-primary shrink-0 mt-1" />
                       <div>
-                         <p className="text-brand-text"><span className="font-bold">平日</span> 10:00 〜 21:00</p>
-                         <p className="text-brand-text"><span className="font-bold">土日</span> 08:30 〜 17:00</p>
+                         <p className="text-brand-text"><span className="font-bold">平日</span> 10:00 〜 14:00</p>
+                         <p className="text-brand-text"><span className="font-bold"></span> 16:00 〜 21:00</p>
                          <p className="text-sm text-brand-textLight mt-1">※ 木曜定休</p>
                       </div>
                    </div>
