@@ -12,7 +12,7 @@ export const Features: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="text-brand-primary font-bold tracking-widest text-sm mb-3 block">MIECHE STYLE</span>
+          <span className="text-brand-primary font-bold tracking-widest text-sm mb-3 block">Meshie STYLE</span>
           <h2 className="text-3xl md:text-5xl font-bold text-brand-text">
             ミーシェの<span className="text-brand-primary">5つ</span>のこだわり
           </h2>
