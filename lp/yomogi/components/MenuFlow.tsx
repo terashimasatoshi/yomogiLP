@@ -88,7 +88,7 @@ export const MenuFlow: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-sm text-brand-textLight">※次回予約でさらにお得に！</p>
+              <p className="text-sm text-brand-textLight">※次回予約特典有り！</p>
             </motion.div>
 
             {/* Pair */}
