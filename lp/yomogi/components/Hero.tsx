@@ -137,7 +137,7 @@ export const Hero: React.FC = () => {
                className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/80 rotate-2 hover:rotate-0 transition-transform duration-500 z-10"
              >
                 <img 
-                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1200&fm=webp" 
+                  src="/images/hero-visual.webp"
                   alt="Relaxed woman smiling" 
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />

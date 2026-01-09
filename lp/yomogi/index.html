@@ -3,12 +3,83 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>福井の本格よもぎ蒸し専門店 ミーシェ｜冷え・妊活・生理痛</title>
-    <meta name="description" content="福井市の本格よもぎ蒸し専門店ミーシェ。全7室完全個室。国産無農薬・伊吹山産よもぎ使用。冷え性、妊活、生理痛、更年期のお悩みに。初回¥3,900。" />
+    <title>福井の本格よもぎ蒸し専門店 ミーシェ｜冷え・妊活・生理痛・更年期ケア</title>
+    <meta name="description" content="福井市の本格よもぎ蒸し専門店ミーシェ(MIECHE)。全7室完全個室。国産無農薬・伊吹山産よもぎ使用。冷え性、妊活、生理痛、更年期のお悩みに。初回¥3,900。駐車場完備。" />
+    <meta name="keywords" content="よもぎ蒸し,福井市,温活,妊活,冷え性,生理痛,更年期,デトックス,ミーシェ" />
+    
+    <!-- Open Graph / Facebook / LINE -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meshie-lp.vercel.app/" />
+    <meta property="og:title" content="福井の本格よもぎ蒸し専門店 ミーシェ｜冷え・妊活・生理痛" />
+    <meta property="og:description" content="福井市の完全個室よもぎ蒸しサロン。国産無農薬よもぎで心も体も温まる癒やしの時間を。初回体験¥3,900。" />
+    <meta property="og:image" content="https://meshie-lp.vercel.app/images/hero-visual.webp" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://meshie-lp.vercel.app/" />
+    <meta property="twitter:title" content="福井の本格よもぎ蒸し専門店 ミーシェ" />
+    <meta property="twitter:description" content="冷え性・生理痛・妊活に。福井市の完全個室よもぎ蒸し専門店。" />
+    <meta property="twitter:image" content="https://meshie-lp.vercel.app/images/hero-visual.webp" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- MEO / Local SEO: Schema.org Structure Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "本格よもぎ蒸し専門店 ミーシェ (MIECHE)",
+      "image": "https://meshie-lp.vercel.app/images/hero-visual.webp",
+      "@id": "https://meshie-lp.vercel.app",
+      "url": "https://meshie-lp.vercel.app",
+      "telephone": "",
+      "priceRange": "¥3,900 - ¥7,800",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "高木中央2丁目2612",
+        "addressLocality": "福井市",
+        "addressRegion": "福井県",
+        "postalCode": "910-0804",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.082,
+        "longitude": 136.236
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:30",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/",
+        "https://line.me/"
+      ]
+    }
+    </script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -53,13 +124,13 @@
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "vite": "https://esm.sh/vite@^7.3.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.24.12"
   }
 }
 </script>

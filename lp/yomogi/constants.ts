@@ -25,31 +25,31 @@ export const FEATURES = [
     id: 1,
     title: "こだわりの国産・無農薬よもぎ",
     desc: "伊吹山の大自然で育った、野生のよもぎを使用しています。農薬を使わず大切に育てられたよもぎは、香りも成分も格別。深呼吸したくなるような優しい香りに包まれます。",
-    img: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&q=80&w=800&fm=webp" // Soft herbs/oil
+    img: "/images/feature-yomogi.webp"
   },
   {
     id: 2,
     title: "あなただけの特別ブレンド",
     desc: "「冷え」「むくみ」「美肌」など、その日の体調や気分に合わせて6種類のハーブから選べます。カウンセリングであなたにぴったりの香りを見つけましょう。",
-    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800&fm=webp" // Tea/Herbs
+    img: "/images/feature-herbs.webp"
   },
   {
     id: 3,
     title: "木のぬくもりを感じる檜の椅子",
     desc: "体に触れるものだから、椅子にもこだわりました。接着剤を使わない天然檜（ひのき）の一枚板を使用。森林浴をしているようなリラックスタイムを。",
-    img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=800&fm=webp" // Wooden spa vibe
+    img: "/images/feature-chair.webp"
   },
   {
     id: 4,
     title: "全室個室でゆったりプライベート",
     desc: "周りの目を気にせず、自分だけの時間を過ごせる完全個室。お友達や親子でのペア利用も大歓迎です。おしゃべりしながら温活しませんか？",
-    img: "https://images.unsplash.com/photo-1598905858480-f9999335f60b?auto=format&fit=crop&q=80&w=800&fm=webp" // Interior
+    img: "/images/feature-room.webp"
   },
   {
     id: 5,
     title: "続けやすい、うれしい価格",
     desc: "「良いものだからこそ、続けてほしい」という想いで、通いやすい価格設定にしました。初回はお得な体験価格をご用意しています。",
-    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1200&fm=webp" // Happy woman/Spa
+    img: "/images/feature-smile.webp"
   }
 ];
 

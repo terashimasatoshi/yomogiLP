@@ -93,7 +93,7 @@ export const ProblemAffinity: React.FC = () => {
             <div className="w-full md:w-1/2 relative">
                <motion.img 
                  whileHover={{ rotate: 0, scale: 1.05 }}
-                 src="https://images.unsplash.com/photo-1544367563-12123d8965cd?auto=format&fit=crop&q=80&w=1200&fm=webp" 
+                 src="/images/owner.webp"
                  alt="Owner smiling" 
                  className="w-full aspect-square object-cover rounded-2xl shadow-lg rotate-2 transition-transform duration-500"
                />
