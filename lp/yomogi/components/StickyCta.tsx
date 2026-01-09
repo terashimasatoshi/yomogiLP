@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BOOKING_URL } from '../constants';
 
 export const StickyCta: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,9 @@ export const StickyCta: React.FC = () => {
             </div>
             <motion.a 
               whileTap={{ scale: 0.95 }}
-              href="#booking" 
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-primary text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-brand-accent transition-colors text-sm"
             >
               予約する

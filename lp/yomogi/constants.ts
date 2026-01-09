@@ -1,5 +1,8 @@
 import { LucideIcon, Snowflake, Frown, Coffee, Baby, Flower, Sparkles } from 'lucide-react';
 
+// 予約URL（ホットペッパービューティー）
+export const BOOKING_URL = "https://beauty.hotpepper.jp/kr/slnH000769481/coupon/";
+
 export const COLORS = {
   primary: '#E88D93',
   primaryLight: '#FADADD',

@@ -8,6 +8,7 @@ import { TestimonialsFaq } from './components/TestimonialsFaq';
 import { FinalCta } from './components/FinalCta';
 import { StickyCta } from './components/StickyCta';
 import { motion } from 'framer-motion';
+import { BOOKING_URL } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -34,7 +35,9 @@ const App: React.FC = () => {
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#booking" 
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-brand-primary text-white px-6 py-3 rounded-full hover:bg-brand-accent transition-all shadow-md hover:shadow-lg"
           >
             ご予約はこちら
@@ -44,7 +47,9 @@ const App: React.FC = () => {
         <motion.a 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="#booking" 
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="md:hidden bg-brand-primary text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-brand-accent transition-colors shadow-sm"
         >
           予約

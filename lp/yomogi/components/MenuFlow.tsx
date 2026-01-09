@@ -1,5 +1,5 @@
 import React from 'react';
-import { FLOW_STEPS } from '../constants';
+import { FLOW_STEPS, BOOKING_URL } from '../constants';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -112,7 +112,9 @@ export const MenuFlow: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#booking"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-brand-text text-white text-lg font-bold px-12 py-4 rounded-full shadow-lg hover:bg-brand-primary transition-all duration-300"
             >
               空き状況をチェックする <ArrowRight className="ml-2" />

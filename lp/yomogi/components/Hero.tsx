@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BOOKING_URL } from '../constants';
 
 export const Hero: React.FC = () => {
   return (
@@ -116,7 +117,9 @@ export const Hero: React.FC = () => {
                   <motion.a 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="#booking" 
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full md:w-auto bg-brand-primary text-white text-lg font-bold px-8 py-4 rounded-full shadow-md hover:bg-brand-accent hover:shadow-lg transition-all text-center flex items-center justify-center gap-2"
                   >
                     空き状況を見る <ArrowRight className="w-5 h-5" />
