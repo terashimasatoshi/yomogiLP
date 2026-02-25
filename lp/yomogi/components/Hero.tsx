@@ -2,24 +2,17 @@ import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { BOOKING_URL } from '../constants';
+import { trackBookingClick } from '../utils/tracking';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full pt-28 pb-16 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Background Video */}
+    <section className="relative w-full pt-20 pb-10 md:pt-40 md:pb-32 overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="w-full h-full object-cover"
-        >
-          <source src="https://videos.pexels.com/video-files/4057316/4057316-hd_1920_1080_25fps.mp4" type="video/mp4" />
-        </video>
+        <img src="/images/hero-visual.webp" alt="" fetchPriority="high" className="w-full h-full object-cover" />
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-white/40"></div>
       </div>
 
       {/* Background Decorative Blobs with Animation - Adjusted for Video BG */}
@@ -41,9 +34,9 @@ export const Hero: React.FC = () => {
       />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-20">
           
-          <div className="w-full md:w-1/2 text-center md:text-left space-y-8">
+          <div className="w-full md:w-1/2 text-center md:text-left space-y-4 md:space-y-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -57,7 +50,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text leading-tight tracking-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-text leading-tight tracking-tight"
             >
               ふわっと温まる、<br />
               <span className="text-brand-primary inline-block relative">
@@ -76,7 +69,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg md:text-xl text-brand-textLight leading-relaxed font-medium"
+              className="hidden md:block text-lg md:text-xl text-brand-textLight leading-relaxed font-medium"
             >
               冷えも、疲れも、全部リセット。<br />
               完全個室のよもぎ蒸しで、<br className="md:hidden" />心と体をほどきませんか？
@@ -86,7 +79,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-wrap justify-center md:justify-start gap-4 text-base md:text-lg font-bold text-brand-text"
+              className="hidden md:flex flex-wrap justify-center md:justify-start gap-4 text-base md:text-lg font-bold text-brand-text"
             >
               <div className="flex items-center bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-sm text-brand-accent border border-brand-accent/20">
                 <Star className="w-5 h-5 fill-current mr-2" />
@@ -114,12 +107,13 @@ export const Hero: React.FC = () => {
                         <span className="text-sm text-gray-500">(税込)</span>
                      </div>
                   </div>
-                  <motion.a 
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackBookingClick('hero_cta')}
                     className="w-full md:w-auto bg-brand-primary text-white text-lg font-bold px-8 py-4 rounded-full shadow-md hover:bg-brand-accent hover:shadow-lg transition-all text-center flex items-center justify-center gap-2"
                   >
                     空き状況を見る <ArrowRight className="w-5 h-5" />

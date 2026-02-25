@@ -40,9 +40,10 @@ export const Features: React.FC = () => {
                      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-[3rem] ${index % 2 === 0 ? 'bg-brand-primary/10' : 'bg-brand-secondary/10'} -z-10`}
                    />
                    
-                   <img 
-                    src={feature.img} 
-                    alt={feature.title} 
+                   <img
+                    src={feature.img}
+                    alt={feature.title}
+                    loading="lazy"
                     className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
                   />
                   

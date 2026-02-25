@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar, MessageCircle, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { BOOKING_URL } from '../constants';
+import { trackBookingClick } from '../utils/tracking';
 
 export const FinalCta: React.FC = () => {
   return (
@@ -119,24 +120,26 @@ export const FinalCta: React.FC = () => {
           </motion.div>
           
           <div className="flex flex-col md:flex-row justify-center gap-6">
-             <motion.a 
+             <motion.a
                whileHover={{ scale: 1.05, y: -5 }}
                whileTap={{ scale: 0.95 }}
                href={BOOKING_URL}
                target="_blank"
                rel="noopener noreferrer"
+               onClick={() => trackBookingClick('final_cta_hotpepper')}
                className="flex-1 max-w-sm flex items-center justify-center gap-3 bg-brand-primary text-white text-xl font-bold py-5 rounded-full shadow-lg hover:bg-brand-accent transition-all"
              >
                <Calendar size={24} />
                <span>空き状況を見て予約</span>
              </motion.a>
-             
-             <motion.a 
+
+             <motion.a
                whileHover={{ scale: 1.05, y: -5 }}
                whileTap={{ scale: 0.95 }}
                href="https://lin.ee/kGerKvo"
                target="_blank"
                rel="noopener noreferrer"
+               onClick={() => trackBookingClick('final_cta_line')}
                className="flex-1 max-w-sm flex items-center justify-center gap-3 bg-[#06C755] text-white text-xl font-bold py-5 rounded-full shadow-lg hover:brightness-105 transition-all"
              >
                <MessageCircle size={24} />
