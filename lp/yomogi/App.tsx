@@ -16,10 +16,7 @@ const App: React.FC = () => {
     <LazyMotion features={domMax}>
     <div className="antialiased text-brand-text font-sans bg-brand-bg selection:bg-brand-primary/30">
       {/* Navigation Header */}
-      <m.header 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      <header
         className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md h-16 md:h-20 flex items-center justify-between px-6 md:px-12 transition-all border-b border-brand-primary/10"
       >
         <div className="flex items-center gap-2">
@@ -58,7 +55,7 @@ const App: React.FC = () => {
         >
           予約
         </m.a>
-      </m.header>
+      </header>
 
       <main>
         <Hero />
