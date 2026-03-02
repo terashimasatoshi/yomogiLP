@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROBLEMS } from '../constants';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const ProblemAffinity: React.FC = () => {
   const containerVariants = {
@@ -22,7 +22,7 @@ export const ProblemAffinity: React.FC = () => {
     <>
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,9 +35,9 @@ export const ProblemAffinity: React.FC = () => {
             <p className="text-lg text-brand-textLight">
               「なんとなく調子が悪い…」は、<br className="md:hidden"/>体が冷えているサインかも。
             </p>
-          </motion.div>
+          </m.div>
           
-          <motion.div 
+          <m.div 
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -45,7 +45,7 @@ export const ProblemAffinity: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
           >
             {PROBLEMS.map((item, idx) => (
-              <motion.div 
+              <m.div 
                 key={idx} 
                 variants={itemVariants}
                 whileHover={{ scale: 1.03, rotate: -1 }}
@@ -57,11 +57,11 @@ export const ProblemAffinity: React.FC = () => {
                 <p className="text-brand-text font-medium text-lg leading-relaxed pt-1">
                   {item.text}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
 
-          <motion.div 
+          <m.div 
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
@@ -77,13 +77,13 @@ export const ProblemAffinity: React.FC = () => {
               ミーシェのよもぎ蒸しで、体の芯からポカポカ温まって、<br className="hidden md:inline"/>
               明日からの自分をもっと好きになりませんか？
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       <section className="py-24 bg-brand-highlight/30">
         <div className="container mx-auto px-6 max-w-5xl">
-          <motion.div 
+          <m.div 
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -91,13 +91,13 @@ export const ProblemAffinity: React.FC = () => {
             className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl flex flex-col md:flex-row items-center gap-12 border-4 border-white"
           >
             <div className="w-full md:w-1/2 relative">
-               <motion.img 
+               <m.img 
                  whileHover={{ rotate: 0, scale: 1.05 }}
                  src="/images/owner.webp"
                  alt="Owner smiling" 
                  className="w-full aspect-square object-cover rounded-2xl shadow-lg rotate-2 transition-transform duration-500"
                />
-               <motion.div 
+               <m.div 
                  initial={{ scale: 0 }}
                  whileInView={{ scale: 1 }}
                  viewport={{ once: true }}
@@ -105,7 +105,7 @@ export const ProblemAffinity: React.FC = () => {
                  className="absolute -bottom-4 -right-4 bg-brand-secondary text-white px-6 py-2 rounded-full font-bold shadow-md border-2 border-white"
                >
                  Owner Message
-               </motion.div>
+               </m.div>
             </div>
             
             <div className="w-full md:w-1/2 space-y-6">
@@ -126,7 +126,7 @@ export const ProblemAffinity: React.FC = () => {
                 初めての方も、どうぞリラックスしてお越しくださいね。
               </p>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { BOOKING_URL } from '../constants';
 import { trackBookingClick } from '../utils/tracking';
 
@@ -14,7 +14,7 @@ export const StickyCta: React.FC = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div 
+        <m.div 
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
@@ -26,7 +26,7 @@ export const StickyCta: React.FC = () => {
               <span className="text-xs text-brand-primary font-bold mb-0.5">初回限定</span>
               <span className="text-2xl font-bold text-brand-text leading-none">¥3,900<span className="text-xs text-brand-textLight ml-1 font-normal">(税込)</span></span>
             </div>
-            <motion.a
+            <m.a
               whileTap={{ scale: 0.95 }}
               href={BOOKING_URL}
               target="_blank"
@@ -35,9 +35,9 @@ export const StickyCta: React.FC = () => {
               className="bg-brand-primary text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-brand-accent transition-colors text-sm"
             >
               予約する
-            </motion.a>
+            </m.a>
           </div>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

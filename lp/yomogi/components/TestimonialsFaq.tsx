@@ -1,7 +1,7 @@
 import React from 'react';
 import { TESTIMONIALS, FAQS } from '../constants';
 import { ChevronDown, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const TestimonialsFaq: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const TestimonialsFaq: React.FC = () => {
       {/* Testimonials */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -21,11 +21,11 @@ export const TestimonialsFaq: React.FC = () => {
             <p className="text-lg text-brand-textLight">
                嬉しいお言葉をたくさんいただいています。
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {TESTIMONIALS.map((t, idx) => (
-              <motion.div 
+              <m.div 
                 key={idx} 
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -50,11 +50,11 @@ export const TestimonialsFaq: React.FC = () => {
                        <p className="text-sm text-brand-textLight">{t.concern}</p>
                     </div>
                  </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -67,14 +67,14 @@ export const TestimonialsFaq: React.FC = () => {
                   <span className="text-sm">/ 5.0</span>
                 </p>
              </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-24 bg-brand-bgCream">
         <div className="container mx-auto px-6 max-w-3xl">
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,11 +86,11 @@ export const TestimonialsFaq: React.FC = () => {
             <p className="text-lg text-brand-textLight">
                気になることはこちらでチェック！
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="space-y-6">
             {FAQS.map((faq, idx) => (
-              <motion.details 
+              <m.details 
                 key={idx} 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export const TestimonialsFaq: React.FC = () => {
                 <div className="px-8 pb-8 pt-0 pl-[4.5rem] text-brand-textLight text-lg leading-loose bg-white">
                   {faq.a}
                 </div>
-              </motion.details>
+              </m.details>
             ))}
           </div>
         </div>

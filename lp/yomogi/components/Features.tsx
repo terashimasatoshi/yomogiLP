@@ -1,12 +1,12 @@
 import React from 'react';
 import { FEATURES } from '../constants';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const Features: React.FC = () => {
   return (
     <section id="features" className="py-24 bg-brand-bgCream overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -16,11 +16,11 @@ export const Features: React.FC = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-brand-text">
             ミーシェの<span className="text-brand-primary">5つ</span>のこだわり
           </h2>
-        </motion.div>
+        </m.div>
 
         <div className="space-y-24">
           {FEATURES.map((feature, index) => (
-            <motion.div 
+            <m.div 
               key={feature.id} 
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -31,7 +31,7 @@ export const Features: React.FC = () => {
               <div className="w-full md:w-1/2">
                 <div className="relative group">
                    {/* Background Blob */}
-                   <motion.div 
+                   <m.div 
                      animate={{ 
                        rotate: index % 2 === 0 ? [3, -3, 3] : [-3, 3, -3],
                        scale: [1, 1.05, 1]
@@ -47,12 +47,12 @@ export const Features: React.FC = () => {
                     className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
                   />
                   
-                  <motion.div 
+                  <m.div 
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     className="absolute -top-6 -left-6 bg-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold text-brand-primary shadow-lg border-4 border-brand-bgCream z-10"
                   >
                     0{feature.id}
-                  </motion.div>
+                  </m.div>
                 </div>
               </div>
               
@@ -65,7 +65,7 @@ export const Features: React.FC = () => {
                   {feature.desc}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

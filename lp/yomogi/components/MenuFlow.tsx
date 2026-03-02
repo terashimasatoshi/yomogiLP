@@ -1,7 +1,8 @@
 import React from 'react';
 import { FLOW_STEPS, BOOKING_URL } from '../constants';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
+import { trackBookingClick } from '../utils/tracking';
 
 export const MenuFlow: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ export const MenuFlow: React.FC = () => {
       {/* Menu Section */}
       <section id="menu" className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -21,10 +22,10 @@ export const MenuFlow: React.FC = () => {
             <p className="text-brand-textLight text-lg">
               シンプルで分かりやすい料金設定です。
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Main Price Card */}
-          <motion.div
+          <m.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
@@ -59,12 +60,12 @@ export const MenuFlow: React.FC = () => {
                 <span className="bg-white px-4 py-2 rounded-lg shadow-sm">☕️ ドリンク付き</span>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Other Menu Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {/* Repeat */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -89,10 +90,10 @@ export const MenuFlow: React.FC = () => {
               </div>
 
               <p className="text-sm text-brand-textLight">※次回予約特典有り！</p>
-            </motion.div>
+            </m.div>
 
             {/* Pair */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -105,20 +106,21 @@ export const MenuFlow: React.FC = () => {
                 <span className="text-2xl font-bold text-brand-primary">¥7,800</span>
               </div>
               <p className="text-sm text-brand-textLight">お友達や親子で。お一人様 ¥3,900</p>
-            </motion.div>
+            </m.div>
           </div>
 
           <div className="text-center">
-            <motion.a
+            <m.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackBookingClick('menu_cta')}
               className="inline-flex items-center justify-center bg-brand-text text-white text-lg font-bold px-12 py-4 rounded-full shadow-lg hover:bg-brand-primary transition-all duration-300"
             >
               空き状況をチェックする <ArrowRight className="ml-2" />
-            </motion.a>
+            </m.a>
           </div>
         </div>
       </section>
@@ -131,7 +133,7 @@ export const MenuFlow: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -143,11 +145,11 @@ export const MenuFlow: React.FC = () => {
             <p className="text-lg text-brand-textLight">
               初めてでも大丈夫。ゆったりとお過ごしください。
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="space-y-8">
             {FLOW_STEPS.map((step, index) => (
-              <motion.div
+              <m.div
                 key={step.step}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +174,7 @@ export const MenuFlow: React.FC = () => {
                   </div>
                   <p className="text-lg text-brand-textLight leading-loose">{step.desc}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

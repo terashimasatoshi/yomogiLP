@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, MessageCircle, MapPin, Clock } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { BOOKING_URL } from '../constants';
 import { trackBookingClick } from '../utils/tracking';
 
@@ -10,7 +10,7 @@ export const FinalCta: React.FC = () => {
       {/* Access Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -19,9 +19,9 @@ export const FinalCta: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
               店舗情報
             </h2>
-          </motion.div>
+          </m.div>
           
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -66,21 +66,21 @@ export const FinalCta: React.FC = () => {
                    </div>
                 </div>
              </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Final CTA */}
       <section id="booking" className="py-24 bg-brand-highlight/30 relative overflow-hidden">
         {/* Decorative Background Elements */}
-        <motion.div 
+        <m.div 
            animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.6, 0.3] }}
            transition={{ duration: 5, repeat: Infinity }}
            className="absolute top-0 left-1/4 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -z-10"
         />
 
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
-          <motion.h2 
+          <m.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -88,8 +88,8 @@ export const FinalCta: React.FC = () => {
           >
             冷えを手放して、<br/>
             もっと私を好きになる。
-          </motion.h2>
-          <motion.p 
+          </m.h2>
+          <m.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -98,9 +98,9 @@ export const FinalCta: React.FC = () => {
           >
             今日から温活、はじめませんか？<br/>
             あなたのご来店を心よりお待ちしています。
-          </motion.p>
+          </m.p>
           
-          <motion.div 
+          <m.div 
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
@@ -117,10 +117,10 @@ export const FinalCta: React.FC = () => {
              <p className="text-xl font-bold text-brand-text">
                漢方よもぎ蒸し (30分)
              </p>
-          </motion.div>
+          </m.div>
           
           <div className="flex flex-col md:flex-row justify-center gap-6">
-             <motion.a
+             <m.a
                whileHover={{ scale: 1.05, y: -5 }}
                whileTap={{ scale: 0.95 }}
                href={BOOKING_URL}
@@ -131,9 +131,9 @@ export const FinalCta: React.FC = () => {
              >
                <Calendar size={24} />
                <span>空き状況を見て予約</span>
-             </motion.a>
+             </m.a>
 
-             <motion.a
+             <m.a
                whileHover={{ scale: 1.05, y: -5 }}
                whileTap={{ scale: 0.95 }}
                href="https://lin.ee/kGerKvo"
@@ -144,7 +144,7 @@ export const FinalCta: React.FC = () => {
              >
                <MessageCircle size={24} />
                <span>LINEで相談する</span>
-             </motion.a>
+             </m.a>
           </div>
         </div>
       </section>

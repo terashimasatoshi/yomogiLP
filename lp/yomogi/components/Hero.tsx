@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { BOOKING_URL } from '../constants';
 import { trackBookingClick } from '../utils/tracking';
 
@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Background Decorative Blobs with Animation - Adjusted for Video BG */}
-      <motion.div 
+      <m.div 
         animate={{ 
           scale: [1, 1.2, 1],
           rotate: [0, 10, -10, 0],
@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
         className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 z-0 mix-blend-multiply"
       />
-      <motion.div 
+      <m.div 
         animate={{ 
           scale: [1, 1.3, 1],
           x: [0, 20, 0],
@@ -37,16 +37,16 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-20">
           
           <div className="w-full md:w-1/2 text-center md:text-left space-y-4 md:space-y-8">
-            <motion.div 
+            <m.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-block bg-white/80 backdrop-blur-md border border-brand-primary/20 text-brand-primary px-4 py-2 rounded-full text-base font-bold mb-4 shadow-sm"
             >
               福井市・女性専用サロン 🌿
-            </motion.div>
+            </m.div>
 
-            <motion.h1 
+            <m.h1 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", duration: 0.8, delay: 0.3 }}
@@ -55,17 +55,17 @@ export const Hero: React.FC = () => {
               ふわっと温まる、<br />
               <span className="text-brand-primary inline-block relative">
                 私をいたわる時間。
-                <motion.svg 
+                <m.svg 
                    initial={{ pathLength: 0 }}
                    animate={{ pathLength: 1 }}
                    transition={{ duration: 1, delay: 1 }}
                    className="absolute -bottom-2 left-0 w-full h-3 text-brand-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                    <path d="M0 5 Q 50 10 100 5" fill="transparent" stroke="currentColor" strokeWidth="4" />
-                </motion.svg>
+                </m.svg>
               </span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p 
+            <m.p 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -73,9 +73,9 @@ export const Hero: React.FC = () => {
             >
               冷えも、疲れも、全部リセット。<br />
               完全個室のよもぎ蒸しで、<br className="md:hidden" />心と体をほどきませんか？
-            </motion.p>
+            </m.p>
 
-            <motion.div 
+            <m.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -89,9 +89,9 @@ export const Hero: React.FC = () => {
                 <span className="w-3 h-3 bg-brand-secondary rounded-full mr-2"></span>
                 <span>国産無農薬よもぎ</span>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div 
+            <m.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
                         <span className="text-sm text-gray-500">(税込)</span>
                      </div>
                   </div>
-                  <motion.a
+                  <m.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href={BOOKING_URL}
@@ -117,18 +117,18 @@ export const Hero: React.FC = () => {
                     className="w-full md:w-auto bg-brand-primary text-white text-lg font-bold px-8 py-4 rounded-full shadow-md hover:bg-brand-accent hover:shadow-lg transition-all text-center flex items-center justify-center gap-2"
                   >
                     空き状況を見る <ArrowRight className="w-5 h-5" />
-                  </motion.a>
+                  </m.a>
                </div>
-            </motion.div>
+            </m.div>
           </div>
 
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="w-full md:w-1/2 relative hidden md:block"
           >
-             <motion.div 
+             <m.div 
                animate={{ y: [0, -15, 0] }}
                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/80 rotate-2 hover:rotate-0 transition-transform duration-500 z-10"
@@ -138,22 +138,22 @@ export const Hero: React.FC = () => {
                   alt="Relaxed woman smiling" 
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
-             </motion.div>
+             </m.div>
              
              {/* Decorative Elements around image */}
-             <motion.div 
+             <m.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute -top-8 -right-8 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-80 border-4 border-white/50 border-dashed"
              />
-             <motion.div 
+             <m.div 
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute top-1/2 -left-4 w-4 h-4 bg-brand-primary rounded-full z-20"
              />
 
              {/* Floating badge */}
-             <motion.div 
+             <m.div 
                initial={{ scale: 0 }}
                animate={{ scale: 1 }}
                transition={{ type: "spring", delay: 1.2 }}
@@ -166,8 +166,8 @@ export const Hero: React.FC = () => {
                   <p className="text-xs text-brand-textLight">お客様満足度</p>
                   <p className="text-lg font-bold text-brand-text">98.5%</p>
                 </div>
-             </motion.div>
-          </motion.div>
+             </m.div>
+          </m.div>
 
         </div>
       </div>

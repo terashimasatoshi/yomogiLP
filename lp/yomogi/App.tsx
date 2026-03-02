@@ -7,15 +7,16 @@ import { MenuFlow } from './components/MenuFlow';
 import { TestimonialsFaq } from './components/TestimonialsFaq';
 import { FinalCta } from './components/FinalCta';
 import { StickyCta } from './components/StickyCta';
-import { motion } from 'framer-motion';
+import { LazyMotion, domMax, m } from 'framer-motion';
 import { BOOKING_URL } from './constants';
 import { trackBookingClick } from './utils/tracking';
 
 const App: React.FC = () => {
   return (
+    <LazyMotion features={domMax}>
     <div className="antialiased text-brand-text font-sans bg-brand-bg selection:bg-brand-primary/30">
       {/* Navigation Header */}
-      <motion.header 
+      <m.header 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -33,7 +34,7 @@ const App: React.FC = () => {
         <nav className="hidden md:flex items-center gap-8 text-base font-bold text-brand-textLight">
           <a href="#features" className="hover:text-brand-primary transition-colors hover:scale-105 inline-block">こだわり</a>
           <a href="#menu" className="hover:text-brand-primary transition-colors hover:scale-105 inline-block">メニュー</a>
-          <motion.a
+          <m.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             href={BOOKING_URL}
@@ -43,10 +44,10 @@ const App: React.FC = () => {
             className="bg-brand-primary text-white px-6 py-3 rounded-full hover:bg-brand-accent transition-all shadow-md hover:shadow-lg"
           >
             ご予約はこちら
-          </motion.a>
+          </m.a>
         </nav>
 
-        <motion.a
+        <m.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           href={BOOKING_URL}
@@ -56,8 +57,8 @@ const App: React.FC = () => {
           className="md:hidden bg-brand-primary text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-brand-accent transition-colors shadow-sm"
         >
           予約
-        </motion.a>
-      </motion.header>
+        </m.a>
+      </m.header>
 
       <main>
         <Hero />
@@ -85,6 +86,7 @@ const App: React.FC = () => {
 
       <StickyCta />
     </div>
+    </LazyMotion>
   );
 };
 
